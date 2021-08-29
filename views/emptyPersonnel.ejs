@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personnel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../stylesheets/personnelStyle.css" />
+  </head>
+
+  <body>
+    <header class="">
+      <h1 class="alert alert-success w-100 d-flex justify-content-between">
+        <span class="companyHeader" id="<%= company[0]._id%>">
+          Welcome to Personnel of <%= company[0].name %>
+        </span>
+        <a href="/company">
+          <button class="btn btn-primary">Home Page</button></a
+        >
+      </h1>
+    </header>
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Birth Date</th>
+          <th>Is Manager</th>
+          <th>National Code</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+
+      <tfoot>
+        <tr>
+          <th
+            class="fs-3 bg-success text-light addPersonnel"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            +
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Personnel</h5>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../javascripts/personnel.js"></script>
+</html>
